@@ -27,21 +27,20 @@ prefixes, suffixes = zip(*(comp[1:-1].split('|') for comp in compositions))
 linear_string = prefixes[0] + ''.join(suffix[-1] for suffix in suffixes)
 
 print(linear_string)
+```
 
-Example Output
+### Example Output
 ACTATGAGTCAGCTGCGCATTAGTCAAGTTAG
 
-Requirements
+### Requirements
 Python 3.6 or higher
 
-No external libraries are required.
+### No external libraries are required.
 
-Applications
+### Applications
 Bioinformatics sequence assembly
-
 String reconstruction and genome assembly tasks
-
 Algorithm design in computational biology
 
-License
+### License
 This project is released under the MIT License.
