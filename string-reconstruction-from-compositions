@@ -1,0 +1,14 @@
+compositions = [
+    "(ACC|ATA)", "(ACT|ATT)", "(ATA|TGA)", "(ATT|TGA)", "(CAC|GAT)",
+    "(CCG|TAC)", "(CGA|ACT)", "(CTG|AGC)", "(CTG|TTC)", "(GAA|CTT)",
+    "(GAT|CTG)", "(GAT|CTG)", "(TAC|GAT)", "(TCT|AAG)", "(TGA|GCT)",
+    "(TGA|TCT)", "(TTC|GAA)"
+]
+
+# Extract prefixes and suffixes from the compositions
+prefixes, suffixes = zip(*(comp[1:-1].split('|') for comp in compositions))
+
+# Reconstruct the linear string
+linear_string = prefixes[0] + ''.join(suffix[-1] for suffix in suffixes)
+
+print(linear_string)
